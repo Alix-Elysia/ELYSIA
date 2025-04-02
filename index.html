@@ -13,28 +13,66 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      align-items: center;
-      justify-content: center;
       color: #222;
     }
+
     header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      box-sizing: border-box;
       position: absolute;
-      top: 20px;
-      left: 30px;
-      font-weight: bold;
-      font-size: 1.2em;
-      color: #555;
+      top: 0;
+      left: 0;
     }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
     h1 {
       font-size: 3em;
       margin: 0.3em 0;
-      text-align: center;
     }
+
     p {
       font-size: 1.2em;
-      text-align: center;
       max-width: 80%;
     }
+
     .btn {
       margin-top: 2em;
       padding: 0.8em 2em;
@@ -46,25 +84,38 @@
       cursor: pointer;
       transition: transform 0.3s ease, background-color 0.3s ease;
     }
+
     .btn:hover {
       background-color: #444;
       transform: scale(1.05);
     }
+
     footer {
-      position: absolute;
-      bottom: 20px;
       text-align: center;
       color: #888;
       font-size: 0.9em;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <header>Élysia</header>
+  <header>
+    <div class="logo">Élysia</div>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Créer mon espace</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h1>Bienvenue sur Élysia</h1>
-  <p>Vos souvenirs méritent l’éternité.<br>Nous écrivons ensemble le livre de votre histoire.</p>
-  <button class="btn">Créer mon espace</button>
+  <main>
+    <h1>Bienvenue sur Élysia</h1>
+    <p>Vos souvenirs méritent l’éternité.<br>Nous écrivons ensemble le livre de votre histoire.</p>
+    <button class="btn">Créer mon espace</button>
+  </main>
 
   <footer>
     &copy; 2025 Élysia • Contact : contact@elysia.fr
