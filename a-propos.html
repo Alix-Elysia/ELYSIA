@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos - Élysia</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fdfaf6, #f3e9df);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #221f20;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #444;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+    }
+
+    h1 {
+      margin-bottom: 1em;
+    }
+
+    p {
+      max-width: 800px;
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    a {
+      margin-top: 30px;
+      color: #221f20;
+      font-size: 0.9em;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="image/logo-elysia.png" alt="Logo Élysia">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="inscription.html">Créer mon espace</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>À propos d’Élysia</h1>
+    <p>
+      Élysia est bien plus qu’une simple plateforme : c’est un espace dédié à la mémoire, aux souvenirs, et à la transmission.
+      Nous croyons que chaque vie mérite d’être racontée et préservée. Notre mission est d’offrir aux familles, aux proches, et aux générations futures
+      un sanctuaire numérique élégant, sécurisé et intemporel pour partager les histoires et les parcours de ceux qui nous quittent.
+    </p>
+    <a href="index.html">← Retour à l'accueil</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Élysia • Contact : contact@elysia.fr
+  </footer>
+</body>
+</html>
