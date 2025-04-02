@@ -13,44 +13,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      color: #222;
-    }
-
-    header {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      box-sizing: border-box;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.5em;
-      color: #333;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #444;
-      font-size: 1em;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #000;
+      color: #221f20;
     }
 
     main {
@@ -84,7 +47,7 @@
     .btn {
       margin-top: 10px;
       padding: 0.8em;
-      background-color: #222;
+      background-color: #221f20;
       color: #fff;
       border: none;
       border-radius: 30px;
@@ -94,13 +57,13 @@
     }
 
     .btn:hover {
-      background-color: #444;
+      background-color: #3a3738;
       transform: scale(1.05);
     }
 
     a {
       margin-top: 20px;
-      color: #444;
+      color: #221f20;
       font-size: 0.9em;
       text-decoration: none;
     }
@@ -118,17 +81,7 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Élysia</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="inscription.html">Créer mon espace</a></li>
-        <li><a href="#">À propos</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <h1>Créer mon espace</h1>
@@ -144,5 +97,13 @@
   <footer>
     &copy; 2025 Élysia • Contact : contact@elysia.fr
   </footer>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
 </body>
 </html>

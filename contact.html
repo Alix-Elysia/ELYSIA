@@ -16,41 +16,6 @@
       color: #221f20;
     }
 
-    header {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      box-sizing: border-box;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #444;
-      font-size: 1em;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #000;
-    }
-
     main {
       flex: 1;
       display: flex;
@@ -110,20 +75,7 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="image/logo-elysia.png" alt="Logo Élysia">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="inscription.html">Créer mon espace</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="sanctuaire.html">Sanctuaire</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <h1>Contactez-nous</h1>
@@ -143,6 +95,12 @@
   </footer>
 
   <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+
     const form = document.getElementById('contact-form');
     const confirmation = document.getElementById('confirmation');
 
