@@ -14,6 +14,14 @@
       flex-direction: column;
       min-height: 100vh;
       color: #221f20;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     header {
@@ -62,17 +70,39 @@
     }
 
     h1 {
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
     }
 
     p {
       max-width: 700px;
       line-height: 1.6;
       font-size: 1.1em;
+      margin-bottom: 2em;
+    }
+
+    .souvenirs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 900px;
+      margin-bottom: 2em;
+    }
+
+    .souvenir {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .souvenir:hover {
+      transform: translateY(-5px);
     }
 
     .btn {
-      margin-top: 2em;
       padding: 0.8em 2em;
       background-color: #221f20;
       color: #fff;
@@ -116,5 +146,27 @@
 
   <main>
     <h1>Bienvenue dans votre Sanctuaire</h1>
-    <p>Voici votre espace personnel pour conserver les souvenirs précieux de votre vie ou de vos proches.  
-    Cet espace
+    <p>Un espace intime et éternel, où vos souvenirs vivent à jamais.</p>
+
+    <div class="souvenirs">
+      <div class="souvenir">
+        <h3>Souvenir #1</h3>
+        <p>Le jour où tout a commencé…</p>
+        <small>Ajouté le 01/04/2025</small>
+      </div>
+      <div class="souvenir">
+        <h3>Souvenir #2</h3>
+        <p>Un sourire, un instant précieux.</p>
+        <small>Ajouté le 15/03/2025</small>
+      </div>
+      <!-- On ajoutera dynamiquement ici les souvenirs plus tard -->
+    </div>
+
+    <a href="#" class="btn">Ajouter un souvenir</a>
+  </main>
+
+  <footer>
+    &copy; 2025 Élysia • Contact : contact@elysia.fr
+  </footer>
+</body>
+</html>
